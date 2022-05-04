@@ -21,17 +21,18 @@ double weight2kg(int stones, int pounds, int ounces)
 
 double height2metres(int feet, int inches)
 {
-    return((feet+(inches/12))/3.82);
+    return((feet+(inches/12))/3.28);
 }
 
 char categorise(double kg, double metre)
 {
-    double bmi = (kg/metre*metre);
-	cout <<"here "<< bmi;
+    double bmi = ((kg)/(metre*metre));
+	cout <<"here "<< bmi<< "m"<<metre*metre <<"k"<<kg;
+bmi = ((kg)/(metre*metre));
     char cat;
     if (bmi<19)
         cat='A';
-    else if (bmi<=25)
+    else if (bmi<25)
         cat='B';
     else if (bmi<=30)
         cat='C';
