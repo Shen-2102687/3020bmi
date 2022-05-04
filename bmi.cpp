@@ -30,7 +30,7 @@ char categorise(double kg, double metre)
     char cat;
     if (bmi<19)
         cat='A';
-    else if (bmi<)
+    else if (bmi<25)
         cat='B';
     else if (bmi<=300)
         cat='C';
