@@ -19,7 +19,7 @@ double weight2kg(int stones, int pounds, int ounces)
     return ((stones2pounds(stones)+pounds+ounces2pounds(ounces))/2.2);
 }
 
-double height2metres(int feet, int inches)
+double height2metres(int feet, double inches)
 {
     return((feet+(inches/12))/3.28);
 }
@@ -47,8 +47,8 @@ void process_data(char* input_file, char* output_file)
     ofstream f_out;
     string data;
     string person_id;
-    int pounds, stones, ounces, feet, inches;
-    double kg, m;
+    int pounds, stones, ounces, feet;
+    double kg, m, inches;
     char cat;
 
     f_in.open(input_file,ios::in);
@@ -57,7 +57,7 @@ void process_data(char* input_file, char* output_file)
     {
     	f_in >> person_id >> stones >> pounds >> ounces >> feet >> inches;
         kg=weight2kg(int(stones),int(pounds),int(ounces));
-        m =height2metres(int(feet),int(inches));
+        m =height2metres(int(feet),double(inches));
         cat=categorise(kg,m);
 	if(f_in.eof()) break;
 	f_out << person_id << " " << cat << endl;
