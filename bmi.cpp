@@ -26,11 +26,11 @@ double height2metres(int feet, int inches)
 
 char categorise(double kg, double metre)
 {
-    double bmi = kg*kg/metre;
+    double bmi = kg/metre*metre;
     char cat;
     if (bmi<19)
         cat='A';
-    else if (bmi<=26)
+    else if (bmi<)
         cat='B';
     else if (bmi<=300)
         cat='C';
