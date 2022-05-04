@@ -16,7 +16,7 @@ int stones2pounds(int x)
 
 double weight2kg(int stones, int pounds, int ounces)
 {
-    return (stones2pounds(stones)+pounds+ounces2pounds(ounces))/2.2;
+    return ((stones2pounds(stones)+pounds+ounces2pounds(ounces))/2.2);
 }
 
 double height2metres(int feet, int inches)
@@ -26,15 +26,16 @@ double height2metres(int feet, int inches)
 
 char categorise(double kg, double metre)
 {
-    double bmi = kg/metre*metre;
+    double bmi = (kg/metre*metre);
+	cout <<"here "<< bmi;
     char cat;
     if (bmi<19)
         cat='A';
-    else if (bmi<25)
+    else if (bmi<=25)
         cat='B';
     else if (bmi<=30)
         cat='C';
-    else
+    else if(bmi > 30)
         cat='D';
     return(cat);
 }
