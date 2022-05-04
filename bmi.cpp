@@ -6,7 +6,7 @@ using namespace std;
 
 int ounces2pounds(int x)
 {
-    return(x*16);
+    return(x/16);
 }
 
 int stones2pounds(int x)
